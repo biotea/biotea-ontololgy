@@ -7,9 +7,14 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:biotea="https://github.com/biotea/biotea-ontololgy/bioteaOnto#">
     <owl:Ontology rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto">
         <rdfs:comment>An ontology to support the RDFization of scientific documents in the Biotea project</rdfs:comment>
+        <rdfs:label xml:lang="en">Biotea and biolinks ontology (biotea)</rdfs:label>
+        <owl:versionInfo rdf:datatype="xsd:string">0.1.0</owl:versionInfo>
+        <dc:creator rdf:datatype="xsd:string">Jael Garcia</dc:creator>
+<dc:creator rdf:datatype="xsd:string">Alexander Garcia</dc:creator>
     </owl:Ontology>
     
 
