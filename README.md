@@ -8,7 +8,7 @@ An ontology to support the RDFization of scientific documents in the Biotea proj
   - [Group-based distribution](#group-based-distribution)
   - [Semantic groups model](#semantic-groups-model)
 - [Ontology at a glance](#ontology-at-a-glance)
-- [Classes](#classe)
+- [Classes](#classes)
 - [Object properties](#object-properties)
 - [Data type properties](#data-type-properties)
 
@@ -22,7 +22,7 @@ Similarity between a query document and a related document taking into account s
 
 Distribution of all the terms in a document according to a model describing a set of groups. Every group gets a score [0.0, 1.0] and the summation of all scores is 1.0.
 
-### Semantic grups model
+### Semantic groups model
 Both group-based distribution and semantic similarty refers to a model of semantic groups such as UMLS or Biolinks. Biolinks is a customization of UMLS semantic groups aiming for more granular groups. The groups consider in Biolinks are: ACTI (Activities & Behaviors), ANAT (Anatomy), CHEM (Chemical entities), CONC (Concepts & Ideas), DEVI (Devices), DISO (Disorders), DRUG (Drugs), GENE (Genes & Molecular Sequences), GEOG (Geographic Areas), GNPT (DNA & Protein molecules), OBJC (Objects), OBSV (Physiology attributes & processes), OCCU (Occupations), ORGA (Organizations), PEOP (People and population groups), PHEN (Phenomena), PHYS (Physiological functions), PROC (Procedures), SYMP (Disorder symptoms) and TAXA (Taxonomic terms).
 
 ## Ontology at a glance
@@ -39,4 +39,4 @@ Group-based distribution model
 
 ## Object properties
 
-## Data properties
+## Data type properties
