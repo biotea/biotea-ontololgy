@@ -36,7 +36,60 @@ Group-based distribution model
 
 ## Classes
 
+**Biolink**
+Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional).
+
+**Model**
+A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.
+
+**SemanticAnnotation**
+A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).
+
+**Topic**
+A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).
+
+**TopicDistribution**
+A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.
 
 ## Object properties
 
+**annotator**
+Points to the annotator used to generate the semantic annotations in a document.
+
+**hasModel**
+Points to the model used for the group-based distribution or group-narrowed semantic similarity.
+
+**hasTopic**
+Points to the group with an assigend score (i.e., topic) in a group-based distribution.
+
+**link**
+Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.
+
+**onDocument**
+Points to the document for which the group-based distribution has been calculated.
+
+**onQueryDocument**
+Points to the query document used to calculate a semantic similarity.
+
+**onRelatedDocument**
+Points to the compared document used to calculate a semantic similarity.
+
 ## Data type properties
+
+**group**
+Name given to a semantic group in a Model. String.
+
+**idf**
+Inverse document frequency of a term in a collection of documents. Double.
+
+**occurrences**
+Legacy, see biotea:tf. 
+
+**score**
+Distribution or similarity score. Double.
+
+**tf**
+Term frequency of a term in a document. Integer.
+
+**totalTF**
+Total term frequency of all the terms used to calculate a TopicDistribution. Integer.
