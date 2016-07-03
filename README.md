@@ -37,7 +37,7 @@ Both group-based distribution and semantic similarty refers to a model of semant
 
 ## Classes
 
-| **Biolinks**| 
+| #### Biolink| 
 | :---------- |
 | Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
 |used as domain in object properties |
@@ -89,7 +89,7 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 |Points to the annotator used to generate the semantic annotations in a document.|
 |suggested domains|
-|biotea:Biolink, biotea:TopicDistribution|
+|[biotea:Biolink](#biolink), biotea:TopicDistribution|
 
 |**hasModel**|
 | :---------- |
