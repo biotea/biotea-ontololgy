@@ -42,11 +42,12 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 | Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
 |used as domain in object properties |
-|biotea:annotator, biotea:hasModel, biotea:link, biotea:onQueryDocument, biotea:onRelatedDocument, pav:createdBy|
+|[biotea:annotator](#annotator), [biotea:hasModel](#hasModel), [biotea:link](#link), [biotea:onQueryDocument](#onQueryDocument), [biotea:onRelatedDocument], pav:createdBy|
 |used as domain in data properties |
-|biotea:group, biotea:score, pav:createdOn|
+|[biotea:group](#group), biotea:score, pav:createdOn|
 
-|**Model**|
+### Model
+||
 | :------ |
 |A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.|
 |used as domain in object properties |
@@ -57,7 +58,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |biotea:hasModel|
 
 
-|**SemanticAnnotation**|
+### SemanticAnnotation
+||
 | :---------- |
 |A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).|
 |used as domain in object properties |
@@ -68,7 +70,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |biotea:link|
 
 
-|**Topic**|
+### Topic
+||
 | :---------- |
 |Group name and distribution score calculated for such a group.|
 |used as domain in data properties |
@@ -76,7 +79,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |used as range in object properties |
 |biotea:hasTopic|
 
-|**TopicDistribution**|
+### TopicDistribution
+||
 | :---------- |
 |A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
 |used as domain in object properties |
@@ -86,13 +90,15 @@ Both group-based distribution and semantic similarty refers to a model of semant
 
 ## Object properties
 
-|**annotator**|
+### annotator
+||
 | :---------- |
 |Points to the annotator used to generate the semantic annotations in a document.|
 |suggested domains|
 |[biotea:Biolink](#biolink), biotea:TopicDistribution|
 
-|**hasModel**|
+### hasModel
+||
 | :---------- |
 |Points to the model used for the group-based distribution or group-narrowed semantic similarity.|
 |suggested domains|
@@ -100,7 +106,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |declared ranges|
 |biotea:Model|
 
-|**hasTopic**|
+### hasTopic
+||
 | :---------- |
 |Points to the group with an assigend score (i.e., topic) in a group-based distribution.|
 |suggested domains|
@@ -108,7 +115,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |declared ranges|
 |biotea:Topic|
 
-|**link**|
+### link
+||
 | :---------- |
 |Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.|
 |declared domains|
@@ -116,19 +124,22 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |suggested ranges|
 |biotea:SemanticAnnotation|
 
-|**onDocument**|
+### onDocument
+||
 | :---------- |
 |Points to the document for which the group-based distribution has been calculated.|
 |declared domains|
 |biotea:TopicDistribution|
 
-|**onQueryDocument**|
+### onQueryDocument
+||
 | :---------- |
 |Points to the query document used to calculate a semantic similarity.|
 |declared domains|
 |biotea:Biolink|
 
-|**onRelatedDocument**|
+### onRelatedDocument
+||
 | :---------- |
 |Points to the compared document used to calculate a semantic similarity.|
 |declared domains|
@@ -136,13 +147,15 @@ Both group-based distribution and semantic similarty refers to a model of semant
 
 ## Data type properties
 
-|**group**|
+### group
+||
 | :---------- |
 |Name given to a semantic group in a Model.|
 |suggested domains|
 |biotea:Biolink, biotea:Model, biotea:Topic|
 
-|**idf**|
+### idf
+||
 | :---------- |
 |Inverse document frequency of a term in a collection of documents.|
 |suggested domains|
@@ -150,11 +163,13 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |declared type|
 |xsd:Double|
 
-|**occurrences**|
+### occurrences
+||
 | :---------- |
 |Legacy, see biotea:tf. |
 
-|**score**|
+### score
+||
 | :---------- |
 |Distribution or similarity score.|
 |suggested domains|
@@ -162,7 +177,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |declared type|
 |xsd:Double|
 
-|**tf**|
+### tf
+||
 | :---------- |
 |Term frequency of a term in a document.|
 |suggested domains|
@@ -170,7 +186,8 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |declared type|
 |xsd:Integer|
 
-|**totalTF**|
+### totalTF
+||
 | :---------- |
 |Total term frequency of all the terms used to calculate a TopicDistribution.|
 |suggested domains|
