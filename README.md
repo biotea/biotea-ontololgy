@@ -7,6 +7,7 @@ An ontology to support the RDFization of scientific documents in the Biotea proj
   - [Semantic similarity](#semantic-similarity)
   - [Group-based distribution](#group-based-distribution)
   - [Semantic groups model](#semantic-groups-model)
+  - [Other ontologies](#other-ontologies)
 - [Ontology at a glance](#ontology-at-a-glance)
 - [Classes](#classes)
 - [Object properties](#object-properties)
@@ -24,6 +25,12 @@ Distribution of all the terms in a document according to a model describing a se
 
 ### Semantic groups model
 Both group-based distribution and semantic similarty refers to a model of semantic groups such as UMLS or Biolinks. Biolinks is a customization of UMLS semantic groups aiming for more granular groups. The groups consider in Biolinks are: ACTI (Activities & Behaviors), ANAT (Anatomy), CHEM (Chemical entities), CONC (Concepts & Ideas), DEVI (Devices), DISO (Disorders), DRUG (Drugs), GENE (Genes & Molecular Sequences), GEOG (Geographic Areas), GNPT (DNA & Protein molecules), OBJC (Objects), OBSV (Physiology attributes & processes), OCCU (Occupations), ORGA (Organizations), PEOP (People and population groups), PHEN (Phenomena), PHYS (Physiological functions), PROC (Procedures), SYMP (Disorder symptoms) and TAXA (Taxonomic terms).
+
+### Other ontologies
+Our model references terms in the following ontologies:
+* [DCTERMS](http://dublincore.org/documents/dcmi-terms/)
+* [PAV](http://pav-ontology.github.io/pav/)
+* [RDFS](https://www.w3.org/TR/rdf-schema/)
 
 ## Ontology at a glance
 
