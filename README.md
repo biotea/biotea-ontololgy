@@ -27,69 +27,170 @@ Both group-based distribution and semantic similarty refers to a model of semant
 
 ## Ontology at a glance
 
-Semantic similarity model
+### Semantic similarity model
 ![](similarity model.png)
 
-Group-based distribution model
+
+### Group-based distribution model
 ![](topic distribution model.png)
 
 
 ## Classes
 
-**Biolink**
-Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional).
+#### Biolink
+||
+| :---------- |
+| Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
+|used as domain in object properties |
+|[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:link](#link), [biotea:onQueryDocument](#onquerydocument), [biotea:onrelateddocument], pav:createdBy|
+|used as domain in data properties |
+|[biotea:group](#group), biotea:score, pav:createdOn|
 
-**Model**
-A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.
+### Model
+||
+| :------ |
+|A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.|
+|used as domain in object properties |
+|dcterms:subject|
+|used as domain in data properties |
+|[biotea:group](#group), rdfs:label|
+|used as range in object properties |
+|[biotea:hasModel](#hasmodel)|
 
-**SemanticAnnotation**
-A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).
 
-**Topic**
-A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).
+### SemanticAnnotation
+||
+| :---------- |
+|A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).|
+|used as domain in object properties |
+|dcterms:references|
+|used as domain in data properties |
+|[biotea:idf](#idf), [biotea:tf](#tf)|
+|used as range in object properties |
+|[biotea:link](#link)|
 
-**TopicDistribution**
-A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.
+
+### Topic
+||
+| :---------- |
+|Group name and distribution score calculated for such a group.|
+|used as domain in data properties |
+|[biotea:score](#score), rdfs:label|
+|used as range in object properties |
+|[biotea:hasTopic](#hastopic)|
+
+### TopicDistribution
+||
+| :---------- |
+|A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
+|used as domain in object properties |
+|[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:onDocument](#ondocument), [biotea:hasTopic](#hastopic), pav:createdBy|
+|used as domain in data properties |
+|[biotea:totalTF](#totaltf), pav:createdOn|
 
 ## Object properties
 
-**annotator**
-Points to the annotator used to generate the semantic annotations in a document.
+### annotator
+||
+| :---------- |
+|Points to the annotator used to generate the semantic annotations in a document.|
+|suggested domains|
+|[biotea:Biolink](#biolink), [biotea:TopicDistribution](#topicdistribution)|
 
-**hasModel**
-Points to the model used for the group-based distribution or group-narrowed semantic similarity.
+### hasModel
+||
+| :---------- |
+|Points to the model used for the group-based distribution or group-narrowed semantic similarity.|
+|suggested domains|
+|[biotea:Biolink](#biolink), [biotea:TopicDistribution](#topicdistribution)|
+|declared ranges|
+|[biotea:Model](#model)|
 
-**hasTopic**
-Points to the group with an assigend score (i.e., topic) in a group-based distribution.
+### hasTopic
+||
+| :---------- |
+|Points to the group with an assigend score (i.e., topic) in a group-based distribution.|
+|suggested domains|
+|[biotea:TopicDistribution](#topicdistribution)|
+|declared ranges|
+|[biotea:Topic](#topic)|
 
-**link**
-Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.
+### link
+||
+| :---------- |
+|Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.|
+|declared domains|
+|[biotea:Biolink](#biolink)|
+|suggested ranges|
+|[biotea:SemanticAnnotation](#semanticannotation)|
 
-**onDocument**
-Points to the document for which the group-based distribution has been calculated.
+### onDocument
+||
+| :---------- |
+|Points to the document for which the group-based distribution has been calculated.|
+|declared domains|
+|[biotea:TopicDistribution](#topicdistribution)|
 
-**onQueryDocument**
-Points to the query document used to calculate a semantic similarity.
+### onQueryDocument
+||
+| :---------- |
+|Points to the query document used to calculate a semantic similarity.|
+|declared domains|
+|[biotea:Biolink](#biolink)|
 
-**onRelatedDocument**
-Points to the compared document used to calculate a semantic similarity.
+### onRelatedDocument
+||
+| :---------- |
+|Points to the compared document used to calculate a semantic similarity.|
+|declared domains|
+|[biotea:Biolink](#biolink)|
 
 ## Data type properties
 
-**group**
-Name given to a semantic group in a Model. String.
+### group
+||
+| :---------- |
+|Name given to a semantic group in a Model.|
+|suggested domains|
+|[biotea:Biolink](#biolink), [biotea:Model](#model), [biotea:Topic](#topic)|
 
-**idf**
-Inverse document frequency of a term in a collection of documents. Double.
+### idf
+||
+| :---------- |
+|Inverse document frequency of a term in a collection of documents.|
+|suggested domains|
+|[biote:SemanticAnnotation](#semanticannotation)|
+|declared type|
+|xsd:Double|
 
-**occurrences**
-Legacy, see biotea:tf. 
+### occurrences
+||
+| :---------- |
+|Legacy, see [biotea:tf](#tf) |
 
-**score**
-Distribution or similarity score. Double.
+### score
+||
+| :---------- |
+|Distribution or similarity score.|
+|suggested domains|
+|[biotea:Biolink](#biolink), [biotea:Topic](#topic)|
+|declared type|
+|xsd:Double|
 
-**tf**
-Term frequency of a term in a document. Integer.
+### tf
+||
+| :---------- |
+|Term frequency of a term in a document.|
+|suggested domains|
+|[biotea:SemanticAnnotation](#semanticannotation)|
+|declared type|
+|xsd:Integer|
 
-**totalTF**
-Total term frequency of all the terms used to calculate a TopicDistribution. Integer.
+### totalTF
+||
+| :---------- |
+|Total term frequency of all the terms used to calculate a TopicDistribution.|
+|suggested domains|
+|[biotea:TopicDistribution](#topicdistribution)|
+|declared type|
+|xsd:Integer|
