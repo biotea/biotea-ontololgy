@@ -42,7 +42,7 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 | Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
 |used as domain in object properties |
-|[biotea:annotator](#annotator), [biotea:hasModel](#hasModel), [biotea:link](#link), [biotea:onQueryDocument](#onQueryDocument), [biotea:onRelatedDocument], pav:createdBy|
+|[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:link](#link), [biotea:onQueryDocument](#onquerydocument), [biotea:onrelateddocument], pav:createdBy|
 |used as domain in data properties |
 |[biotea:group](#group), biotea:score, pav:createdOn|
 
@@ -53,9 +53,9 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |used as domain in object properties |
 |dcterms:subject|
 |used as domain in data properties |
-|biotea:group, rdfs:label|
+|[biotea:group](#group), rdfs:label|
 |used as range in object properties |
-|biotea:hasModel|
+|[biotea:hasModel](#hasmodel)|
 
 
 ### SemanticAnnotation
@@ -65,9 +65,9 @@ Both group-based distribution and semantic similarty refers to a model of semant
 |used as domain in object properties |
 |dcterms:references|
 |used as domain in data properties |
-|biotea:idf, biote:tf|
+|[biotea:idf](#idf), [biotea:tf](#tf)|
 |used as range in object properties |
-|biotea:link|
+|[biotea:link](#link)|
 
 
 ### Topic
@@ -75,18 +75,18 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 |Group name and distribution score calculated for such a group.|
 |used as domain in data properties |
-|biotea:score, rdfs:label|
+|[biotea:score](#score), rdfs:label|
 |used as range in object properties |
-|biotea:hasTopic|
+|[biotea:hasTopic](#hastopic)|
 
 ### TopicDistribution
 ||
 | :---------- |
 |A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
 |used as domain in object properties |
-|biotea:annotator, biotea:hasModel, biotea:onDocument, biotea:hasTopic, pav:createdBy|
+|[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:onDocument](#ondocument), [biotea:hasTopic](#hastopic), pav:createdBy|
 |used as domain in data properties |
-|biotea:totalTF, pav:createdOn|
+|[biotea:totalTF](#totaltf), pav:createdOn|
 
 ## Object properties
 
@@ -95,55 +95,55 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 |Points to the annotator used to generate the semantic annotations in a document.|
 |suggested domains|
-|[biotea:Biolink](#biolink), biotea:TopicDistribution|
+|[biotea:Biolink](#biolink), [biotea:TopicDistribution](#topicdistribution)|
 
 ### hasModel
 ||
 | :---------- |
 |Points to the model used for the group-based distribution or group-narrowed semantic similarity.|
 |suggested domains|
-|biotea:Biolink, biotea:TopicDistribution|
+|[biotea:Biolink](#biolink), [biotea:TopicDistribution](#topicdistribution)|
 |declared ranges|
-|biotea:Model|
+|[biotea:Model](#model)|
 
 ### hasTopic
 ||
 | :---------- |
 |Points to the group with an assigend score (i.e., topic) in a group-based distribution.|
 |suggested domains|
-|biotea:TopicDistribution|
+|[biotea:TopicDistribution](#topicdistribution)|
 |declared ranges|
-|biotea:Topic|
+|[biotea:Topic](#topic)|
 
 ### link
 ||
 | :---------- |
 |Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.|
 |declared domains|
-|biotea:Biolink|
+|[biotea:Biolink](#biolink)|
 |suggested ranges|
-|biotea:SemanticAnnotation|
+|[biotea:SemanticAnnotation](#semanticannotation)|
 
 ### onDocument
 ||
 | :---------- |
 |Points to the document for which the group-based distribution has been calculated.|
 |declared domains|
-|biotea:TopicDistribution|
+|[biotea:TopicDistribution](#topicdistribution)|
 
 ### onQueryDocument
 ||
 | :---------- |
 |Points to the query document used to calculate a semantic similarity.|
 |declared domains|
-|biotea:Biolink|
+|[biotea:Biolink](#biolink)|
 
 ### onRelatedDocument
 ||
 | :---------- |
 |Points to the compared document used to calculate a semantic similarity.|
 |declared domains|
-|biotea:Biolink|
+|[biotea:Biolink](#biolink)|
 
 ## Data type properties
 
@@ -152,28 +152,28 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 |Name given to a semantic group in a Model.|
 |suggested domains|
-|biotea:Biolink, biotea:Model, biotea:Topic|
+|[biotea:Biolink](#biolink), [biotea:Model](#model), [biotea:Topic](#topic)|
 
 ### idf
 ||
 | :---------- |
 |Inverse document frequency of a term in a collection of documents.|
 |suggested domains|
-|biote:SemanticAnnotation|
+|[biote:SemanticAnnotation](#semanticannotation)|
 |declared type|
 |xsd:Double|
 
 ### occurrences
 ||
 | :---------- |
-|Legacy, see biotea:tf. |
+|Legacy, see [biotea:tf](#tf) |
 
 ### score
 ||
 | :---------- |
 |Distribution or similarity score.|
 |suggested domains|
-|biotea:Biolink, biotea:Topic|
+|[biotea:Biolink](#biolink), [biotea:Topic](#topic)|
 |declared type|
 |xsd:Double|
 
@@ -182,7 +182,7 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 |Term frequency of a term in a document.|
 |suggested domains|
-|biotea:SemanticAnnotation|
+|[biotea:SemanticAnnotation](#semanticannotation)|
 |declared type|
 |xsd:Integer|
 
@@ -191,6 +191,6 @@ Both group-based distribution and semantic similarty refers to a model of semant
 | :---------- |
 |Total term frequency of all the terms used to calculate a TopicDistribution.|
 |suggested domains|
-|biotea:TopicDistribution|
+|[biotea:TopicDistribution](#topicdistribution)|
 |declared type|
 |xsd:Integer|
