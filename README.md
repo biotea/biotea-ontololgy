@@ -167,6 +167,8 @@ Our model references terms in the following ontologies:
 |Points to a list of paragraphs in an RDFized article.|
 |suggested domains|
 |doco:Section|
+|suggested ranges|
+|rdf:Seq|
 
 ### sectionList
 ||
@@ -174,6 +176,8 @@ Our model references terms in the following ontologies:
 |Points to a list of sections in an RDFized article.|
 |suggested domains|
 |bibo:Document, doco:Section|
+|suggested ranges|
+|rdf:Seq|
 
 ## Data type properties
 
