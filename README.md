@@ -53,6 +53,15 @@ Our model references terms in the following ontologies:
 |used as domain in data properties |
 |[biotea:group](#group), biotea:score, pav:createdOn|
 
+#### ElementSelector
+||
+| :---------- |
+| Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified. |
+|used as domain in object properties |
+|ao:onResource|
+|used as range in object properties |
+|ao:context|
+
 ### Model
 ||
 | :------ |
@@ -151,6 +160,20 @@ Our model references terms in the following ontologies:
 |Points to the compared document used to calculate a semantic similarity.|
 |declared domains|
 |[biotea:Biolink](#biolink)|
+
+### sectionParagraph
+||
+| :---------- |
+|Points to a list of paragraphs in an RDFized article.|
+|suggested domains|
+|doco:Section|
+
+### sectionList
+||
+| :---------- |
+|Points to a list of sections in an RDFized article.|
+|suggested domains|
+|bibo:Document, doco:Section|
 
 ## Data type properties
 
