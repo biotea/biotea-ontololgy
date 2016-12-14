@@ -161,7 +161,7 @@ Our model references terms in the following ontologies:
 |declared domains|
 |[biotea:Biolink](#biolink)|
 
-### sectionParagraph
+### paragraphList
 ||
 | :---------- |
 |Points to a list of paragraphs in an RDFized article.|
