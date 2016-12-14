@@ -90,6 +90,22 @@
         <rdfs:comment>Points to the compared document used to calculate a semantic similarity.</rdfs:comment>
     </owl:ObjectProperty>
     
+    
+    
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#paragraphList -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#paragraphList">
+        <rdfs:comment>Points to a list of sections within an RDFized article.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    
+    
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#sectionList -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#sectionList">
+        <rdfs:comment>Points to a list of paragraphs within an RDFized article.</rdfs:comment>
+    </owl:ObjectProperty>
+    
 
 
     <!-- 
@@ -174,6 +190,14 @@
 
     <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Biolink">
         <rdfs:comment>Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional).</rdfs:comment>
+    </owl:Class>
+    
+    
+        
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#ElementSelector -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#ElementSelector">
+        <rdfs:comment>Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified.</rdfs:comment>
     </owl:Class>
     
 
