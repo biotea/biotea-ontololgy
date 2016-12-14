@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/biotea/biotea-ontololgy/bioteaOnto#"
+     xml:base="https://github.com/biotea/biotea-ontololgy/bioteaOnto"
+     xmlns:pav="http://purl.org/pav/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:biotea="https://github.com/biotea/biotea-ontololgy/bioteaOnto#">
+    <owl:Ontology rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto">
+        <rdfs:comment>An ontology to support the RDFization of scientific documents in the Biotea project</rdfs:comment>
+        <rdfs:label xml:lang="en">Biotea and biolinks ontology (biotea)</rdfs:label>
+        <owl:versionInfo rdf:datatype="xsd:string">0.1.0</owl:versionInfo>
+        <dc:creator rdf:datatype="xsd:string">Jael Garcia</dc:creator>
+<dc:creator rdf:datatype="xsd:string">Alexander Garcia</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#annotator -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#annotator">
+        <rdfs:comment>Points to the annotator used to generate the semantic annotations in a document.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#hasModel -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#hasModel">
+        <rdfs:range rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Model"/>
+        <rdfs:comment>Points to the model used for the group-based distribution or group-narrowed semantic similarity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#hasTopic -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#hasTopic">
+        <rdfs:range rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Topic"/>
+        <rdfs:comment>Points to the group with an assigend score (i.e., topic) in a group-based distribution.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#link -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#link">
+        <rdfs:domain rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Biolink"/>
+        <rdfs:comment>Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#onDocument -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#onDocument">
+        <rdfs:domain rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#TopicDistribution"/>
+        <rdfs:comment>Points to the document for which the group-based distribution has been calculated.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#onQueryDocument -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#onQueryDocument">
+        <rdfs:domain rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Biolink"/>
+        <rdfs:comment>Points to the query document used to calculate a semantic similarity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#onRelatedDocument -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#onRelatedDocument">
+        <rdfs:domain rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Biolink"/>
+        <rdfs:comment>Points to the compared document used to calculate a semantic similarity.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    
+    
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#paragraphList -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#paragraphList">
+        <rdfs:comment>Points to a list of sections within an RDFized article.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    
+    
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#sectionList -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#sectionList">
+        <rdfs:comment>Points to a list of paragraphs within an RDFized article.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#group -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#group">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Name given to a semantic group in a Model.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#idf -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#idf">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>Inverse document frequency of a term in a collection of documents.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#occurrences -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#occurrences">
+        <owl:equivalentProperty rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#tf"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Legacy, see biotea:tf.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#score -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#score">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>Distribution or similarity score.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#tf -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#tf">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Term frequency of a term in a document.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#totalTF -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#totalTF">
+        <rdfs:domain rdf:resource="https://github.com/biotea/biotea-ontololgy/bioteaOnto#TopicDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total term frequency of all the terms used to calculate a TopicDistribution.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#Biolink -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Biolink">
+        <rdfs:comment>Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional).</rdfs:comment>
+    </owl:Class>
+    
+    
+        
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#ElementSelector -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#ElementSelector">
+        <rdfs:comment>Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#Model -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Model">
+        <rdfs:comment>A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#SemanticAnnotation -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#SemanticAnnotation">
+        <rdfs:comment>A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#Topic -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#Topic">
+        <rdfs:comment>Group name and distribution score calculated for such a group.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/biotea/biotea-ontololgy/bioteaOnto#TopicDistribution -->
+
+    <owl:Class rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto#TopicDistribution">
+        <rdfs:comment>A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
