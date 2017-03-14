@@ -35,17 +35,17 @@ Our model references terms in the following ontologies:
 ## Ontology at a glance
 
 ### Semantic similarity model
-![](similarity model.png)
+![](https://github.com/biotea/biotea-ontololgy/blob/master/similarity%20model.png "Similarity model")
 
 
 ### Group-based distribution model
-![](topic distribution model.png)
+![](https://github.com/biotea/biotea-ontololgy/blob/master/topic%20distribution%20model.png "Group distribution model")
 
 
 ## Classes
 
 #### Biolink
-||
+| |
 | :---------- |
 | Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
 |used as domain in object properties |
@@ -54,7 +54,7 @@ Our model references terms in the following ontologies:
 |[biotea:group](#group), biotea:score, pav:createdOn|
 
 #### ElementSelector
-||
+| |
 | :---------- |
 | Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified. |
 |used as domain in object properties |
@@ -63,7 +63,7 @@ Our model references terms in the following ontologies:
 |ao:context|
 
 ### Model
-||
+| |
 | :------ |
 |A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.|
 |used as domain in object properties |
@@ -75,7 +75,7 @@ Our model references terms in the following ontologies:
 
 
 ### SemanticAnnotation
-||
+| |
 | :---------- |
 |A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).|
 |used as domain in object properties |
@@ -87,7 +87,7 @@ Our model references terms in the following ontologies:
 
 
 ### Topic
-||
+| |
 | :---------- |
 |Group name and distribution score calculated for such a group.|
 |used as domain in data properties |
@@ -96,7 +96,7 @@ Our model references terms in the following ontologies:
 |[biotea:hasTopic](#hastopic)|
 
 ### TopicDistribution
-||
+| |
 | :---------- |
 |A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
 |used as domain in object properties |
@@ -107,14 +107,14 @@ Our model references terms in the following ontologies:
 ## Object properties
 
 ### annotator
-||
+| |
 | :---------- |
 |Points to the annotator used to generate the semantic annotations in a document.|
 |suggested domains|
 |[biotea:Biolink](#biolink), [biotea:TopicDistribution](#topicdistribution)|
 
 ### hasModel
-||
+| |
 | :---------- |
 |Points to the model used for the group-based distribution or group-narrowed semantic similarity.|
 |suggested domains|
@@ -123,7 +123,7 @@ Our model references terms in the following ontologies:
 |[biotea:Model](#model)|
 
 ### hasTopic
-||
+| |
 | :---------- |
 |Points to the group with an assigend score (i.e., topic) in a group-based distribution.|
 |suggested domains|
@@ -132,7 +132,7 @@ Our model references terms in the following ontologies:
 |[biotea:Topic](#topic)|
 
 ### link
-||
+| |
 | :---------- |
 |Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.|
 |declared domains|
@@ -141,28 +141,28 @@ Our model references terms in the following ontologies:
 |[biotea:SemanticAnnotation](#semanticannotation)|
 
 ### onDocument
-||
+| |
 | :---------- |
 |Points to the document for which the group-based distribution has been calculated.|
 |declared domains|
 |[biotea:TopicDistribution](#topicdistribution)|
 
 ### onQueryDocument
-||
+| |
 | :---------- |
 |Points to the query document used to calculate a semantic similarity.|
 |declared domains|
 |[biotea:Biolink](#biolink)|
 
 ### onRelatedDocument
-||
+| |
 | :---------- |
 |Points to the compared document used to calculate a semantic similarity.|
 |declared domains|
 |[biotea:Biolink](#biolink)|
 
 ### paragraphList
-||
+| |
 | :---------- |
 |Points to a list of paragraphs in an RDFized article.|
 |suggested domains|
@@ -171,7 +171,7 @@ Our model references terms in the following ontologies:
 |rdf:Seq|
 
 ### sectionList
-||
+| |
 | :---------- |
 |Points to a list of sections in an RDFized article.|
 |suggested domains|
@@ -182,14 +182,14 @@ Our model references terms in the following ontologies:
 ## Data type properties
 
 ### group
-||
+| |
 | :---------- |
 |Name given to a semantic group in a Model.|
 |suggested domains|
 |[biotea:Biolink](#biolink), [biotea:Model](#model), [biotea:Topic](#topic)|
 
 ### idf
-||
+| |
 | :---------- |
 |Inverse document frequency of a term in a collection of documents.|
 |suggested domains|
@@ -198,12 +198,12 @@ Our model references terms in the following ontologies:
 |xsd:Double|
 
 ### occurrences
-||
+| |
 | :---------- |
 |Legacy, see [biotea:tf](#tf) |
 
 ### score
-||
+| |
 | :---------- |
 |Distribution or similarity score.|
 |suggested domains|
@@ -212,7 +212,7 @@ Our model references terms in the following ontologies:
 |xsd:Double|
 
 ### tf
-||
+| |
 | :---------- |
 |Term frequency of a term in a document.|
 |suggested domains|
@@ -221,7 +221,7 @@ Our model references terms in the following ontologies:
 |xsd:Integer|
 
 ### totalTF
-||
+| |
 | :---------- |
 |Total term frequency of all the terms used to calculate a TopicDistribution.|
 |suggested domains|
