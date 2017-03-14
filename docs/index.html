@@ -66,20 +66,20 @@
 <p><img src="./similarity model.png " alt="" title="Similarity model" /></p>
 
 <h3 id="group-based-distribution-model">Group-based distribution model</h3>
-<p><img src="https://github.com/biotea/biotea-ontololgy/blob/master/topic%20distribution%20model.png" alt="" title="Group distribution model" /></p>
+<p><img src="./topic%20distribution%20model.png" alt="" title="Group distribution model" /></p>
 
 <h2 id="classes">Classes</h2>
 
-<h4 id="biolink">Biolink</h4>
-<p>| |
-| :———- |
-| Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
-|used as domain in object properties |
-|<a href="#annotator">biotea:annotator</a>, <a href="#hasmodel">biotea:hasModel</a>, <a href="#link">biotea:link</a>, <a href="#onquerydocument">biotea:onQueryDocument</a>, <a href="#onrelateddocument">biotea:onrelateddocument</a>, pav:createdBy|
-|used as domain in data properties |
-|<a href="#group">biotea:group</a>, <a href="#score">biotea:score</a>, pav:createdOn|</p>
-
-<h4 id="elementselector">ElementSelector</h4>
+<h4 id="Biolink">Biolink</h4>
+<table>
+<tr><td> Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). </td></tr>
+<tr><td>used as domain in object properties </td></tr>
+<tr><td><a href="#annotator">biotea:annotator</a>, <a href="#hasModel">biotea:hasModel</a>, <a href="#link">biotea:link</a>, <a href="#onQueryDocument">biotea:onQueryDocument</a>, <a href="#onRelatedDocument">biotea:onRelatedDocument</a>, pav:createdBy</td></tr>
+<tr><td>used as domain in data properties </td></tr>
+<tr><td><a href="#group">biotea:group</a>, <a href="#score">biotea:score</a>, pav:createdOn</td></tr>
+</table>
+  
+<h4 id="ElementSelector">ElementSelector</h4>
 <p>| |
 | :———- |
 | Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified. |
@@ -88,7 +88,7 @@
 |used as range in object properties |
 |ao:context|</p>
 
-<h3 id="model">Model</h3>
+<h3 id="Model">Model</h3>
 <p>| |
 | :—— |
 |A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.|
@@ -97,9 +97,9 @@
 |used as domain in data properties |
 |<a href="#group">biotea:group</a>, rdfs:label|
 |used as range in object properties |
-|<a href="#hasmodel">biotea:hasModel</a>|</p>
+|<a href="#hasModel">biotea:hasModel</a>|</p>
 
-<h3 id="semanticannotation">SemanticAnnotation</h3>
+<h3 id="SemanticAnnotation">SemanticAnnotation</h3>
 <p>| |
 | :———- |
 |A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).|
@@ -110,21 +110,21 @@
 |used as range in object properties |
 |<a href="#link">biotea:link</a>|</p>
 
-<h3 id="topic">Topic</h3>
+<h3 id="Topic">Topic</h3>
 <p>| |
 | :———- |
 |Group name and distribution score calculated for such a group.|
 |used as domain in data properties |
 |<a href="#score">biotea:score</a>, rdfs:label|
 |used as range in object properties |
-|<a href="#hastopic">biotea:hasTopic</a>|</p>
+|<a href="#hasTopic">biotea:hasTopic</a>|</p>
 
-<h3 id="topicdistribution">TopicDistribution</h3>
+<h3 id="TopicDistribution">TopicDistribution</h3>
 <p>| |
 | :———- |
 |A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
 |used as domain in object properties |
-|<a href="#annotator">biotea:annotator</a>, <a href="#hasmodel">biotea:hasModel</a>, <a href="#ondocument">biotea:onDocument</a>, <a href="#hastopic">biotea:hasTopic</a>, pav:createdBy|
+|<a href="#annotator">biotea:annotator</a>, <a href="#hasModel">biotea:hasModel</a>, <a href="#onDocument">biotea:onDocument</a>, <a href="#hasTopic">biotea:hasTopic</a>, pav:createdBy|
 |used as domain in data properties |
 |<a href="#totaltf">biotea:totalTF</a>, pav:createdOn|</p>
 
