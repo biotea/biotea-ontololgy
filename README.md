@@ -49,9 +49,9 @@ Our model references terms in the following ontologies:
 | :---------- |
 | Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
 |used as domain in object properties |
-|[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:link](#link), [biotea:onQueryDocument](#onquerydocument), [biotea:onrelateddocument], pav:createdBy|
+|[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:link](#link), [biotea:onQueryDocument](#onquerydocument), [biotea:onrelateddocument](#onrelateddocument), pav:createdBy|
 |used as domain in data properties |
-|[biotea:group](#group), biotea:score, pav:createdOn|
+|[biotea:group](#group), [biotea:score](#score), pav:createdOn|
 
 #### ElementSelector
 | |
