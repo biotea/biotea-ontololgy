@@ -45,7 +45,7 @@ Our model references terms in the following ontologies:
 ## Classes
 
 #### Biolink
-| |
+||
 | :---------- |
 | Semantic similarity between a query document and a related document. A score [0.0, 1.0] is assigned to the similarity. The similarity can be restricted to a set of groups defined in a model (e.g. Biolinks or UMLS semantic groups). The semantic annotations participating in the similarity are also recorded (optional). | 
 |used as domain in object properties |
