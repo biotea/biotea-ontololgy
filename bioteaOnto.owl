@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/biotea/biotea-ontololgy/bioteaOnto#"
-     xml:base="https://github.com/biotea/biotea-ontololgy/bioteaOnto"
+<rdf:RDF xmlns="https://github.com/biotea/biotea-ontology/bioteaOnto#"
+     xml:base="https://github.com/biotea/biotea-ontology/bioteaOnto"
      xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:biotea="https://github.com/biotea/biotea-ontololgy/bioteaOnto#">
+     xmlns:biotea="https://github.com/biotea/biotea-ontology/bioteaOnto#">
     <owl:Ontology rdf:about="https://github.com/biotea/biotea-ontololgy/bioteaOnto">
         <rdfs:comment>An ontology to support the RDFization of scientific documents in the Biotea project</rdfs:comment>
         <rdfs:label xml:lang="en">Biotea and biolinks ontology (biotea)</rdfs:label>
