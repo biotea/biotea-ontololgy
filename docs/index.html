@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/biotea-ontololgy/assets/css/style.css?v=30aa5b4cfb605ada3b3ffe378e4069bf0b47a80a">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">biotea-ontololgy</h1>
-      <h2 class="project-tagline">An ontology to support the RDFization of scientific documents in the Biotea project</h2>
-      
-        <a href="https://github.com/biotea/biotea-ontololgy" class="btn">View on GitHub</a>
-      
-      
-    </section>
-
-    <section class="main-content">
       <h1 id="biotea-ontololgy">biotea-ontololgy</h1>
-<p>An ontology to support the RDFization of scientific documents in the Biotea project. Specifically, it supports group-based distribution and semantic similarity.</p>
+<p>An ontology to support the RDFization of scientific documents in the Biotea project. Specifically, it supports group-based distribution and semantic similarity.
+</p>
 
 <p><strong>Table of Contents</strong></p>
 
@@ -80,188 +60,175 @@
 </table>
   
 <h4 id="ElementSelector">ElementSelector</h4>
-<p>| |
-| :———- |
-| Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified. |
-|used as domain in object properties |
-|ao:onResource|
-|used as range in object properties |
-|ao:context|</p>
+<table>
+<tr><td>Selector used in annotations to point to elements within an RDF file. In Biotea this selector is used to link an annotation to the section or paragraph where the corresponding term was identified. </td></tr>
+<tr><td>used as domain in object properties </td></tr>
+<tr><td>ao:onResource</td></tr>
+<tr><td>used as range in object properties </td></tr>
+<tr><td>ao:context</td></tr>
+</table>
 
 <h3 id="Model">Model</h3>
-<p>| |
-| :—— |
-|A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.|
-|used as domain in object properties |
-|dcterms:subject|
-|used as domain in data properties |
-|<a href="#group">biotea:group</a>, rdfs:label|
-|used as range in object properties |
-|<a href="#hasModel">biotea:hasModel</a>|</p>
+<table>
+<tr><td>A model of semantic groups, e.g., UMLS or Biolinks semantic groups. A set of concepts is associated to one group and only one in the model.</td></tr>
+<tr><td>used as domain in object properties </td></tr>
+<tr><td>dcterms:subject</td></tr>
+<tr><td>used as domain in data properties </td></tr>
+<tr><td><a href="#group">biotea:group</a>, rdfs:label</td></tr>
+<tr><td>used as range in object properties </td></tr>
+<tr><td><a href="#hasModel">biotea:hasModel</a></td></tr>
+</table>
 
 <h3 id="SemanticAnnotation">SemanticAnnotation</h3>
-<p>| |
-| :———- |
-|A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).|
-|used as domain in object properties |
-|dcterms:references|
-|used as domain in data properties |
-|<a href="#idf">biotea:idf</a>, <a href="#tf">biotea:tf</a>|
-|used as range in object properties |
-|<a href="#link">biotea:link</a>|</p>
+<table>
+<tr><td>A portion of a document (i.e., word or sequence of words) associated to a semantic entity (e.g., CUI in UMLS).</td></tr>
+<tr><td>used as domain in object properties </td></tr>
+<tr><td>dcterms:references</td></tr>
+<tr><td>used as domain in data properties </td></tr>
+<tr><td><a href="#idf">biotea:idf</a>, <a href="#tf">biotea:tf</a></td></tr>
+<tr><td>used as range in object properties </td></tr>
+<tr><td><a href="#link">biotea:link</a></td></tr>
+</table>
 
 <h3 id="Topic">Topic</h3>
-<p>| |
-| :———- |
-|Group name and distribution score calculated for such a group.|
-|used as domain in data properties |
-|<a href="#score">biotea:score</a>, rdfs:label|
-|used as range in object properties |
-|<a href="#hasTopic">biotea:hasTopic</a>|</p>
+<table>
+<tr><td>Group name and distribution score calculated for such a group.</td></tr>
+<tr><td>used as domain in data properties </td></tr>
+<tr><td><a href="#score">biotea:score</a>, rdfs:label</td></tr>
+<tr><td>used as range in object properties </td></tr>
+<tr><td><a href="#hasTopic">biotea:hasTopic</a></td></tr>
+</table>
 
 <h3 id="TopicDistribution">TopicDistribution</h3>
-<p>| |
-| :———- |
-|A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
-|used as domain in object properties |
-|<a href="#annotator">biotea:annotator</a>, <a href="#hasModel">biotea:hasModel</a>, <a href="#onDocument">biotea:onDocument</a>, <a href="#hasTopic">biotea:hasTopic</a>, pav:createdBy|
-|used as domain in data properties |
-|<a href="#totaltf">biotea:totalTF</a>, pav:createdOn|</p>
+<table>
+<tr><td>A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.</td></tr>
+<tr><td>used as domain in object properties </td></tr>
+<tr><td><a href="#annotator">biotea:annotator</a>, <a href="#hasModel">biotea:hasModel</a>, <a href="#onDocument">biotea:onDocument</a>, <a href="#hasTopic">biotea:hasTopic</a>, pav:createdBy</td></tr>
+<tr><td>used as domain in data properties </td></tr>
+<tr><td><a href="#totalTF">biotea:totalTF</a>, pav:createdOn</td></tr>
+</table>
 
 <h2 id="object-properties">Object properties</h2>
 
 <h3 id="annotator">annotator</h3>
-<p>| |
-| :———- |
-|Points to the annotator used to generate the semantic annotations in a document.|
-|suggested domains|
-|<a href="#biolink">biotea:Biolink</a>, <a href="#topicdistribution">biotea:TopicDistribution</a>|</p>
+<table>
+<tr><td>Points to the annotator used to generate the semantic annotations in a document.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a>, <a href="#TopicDistribution">biotea:TopicDistribution</a></td></tr>
+</table>
 
-<h3 id="hasmodel">hasModel</h3>
-<p>| |
-| :———- |
-|Points to the model used for the group-based distribution or group-narrowed semantic similarity.|
-|suggested domains|
-|<a href="#biolink">biotea:Biolink</a>, <a href="#topicdistribution">biotea:TopicDistribution</a>|
-|declared ranges|
-|<a href="#model">biotea:Model</a>|</p>
+<h3 id="hasModel">hasModel</h3>
+<table>
+<tr><td>Points to the model used for the group-based distribution or group-narrowed semantic similarity.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a>, <a href="#TopicDistribution">biotea:TopicDistribution</a></td></tr>
+<tr><td>declared ranges</td></tr>
+<tr><td><a href="#Model">biotea:Model</a></td></tr>
+</table>
 
-<h3 id="hastopic">hasTopic</h3>
-<p>| |
-| :———- |
-|Points to the group with an assigend score (i.e., topic) in a group-based distribution.|
-|suggested domains|
-|<a href="#topicdistribution">biotea:TopicDistribution</a>|
-|declared ranges|
-|<a href="#topic">biotea:Topic</a>|</p>
+<h3 id="hasTopic">hasTopic</h3>
+<table>
+<tr><td>Points to the group with an assigend score (i.e., topic) in a group-based distribution.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#TopicDistribution">biotea:TopicDistribution</a></td></tr>
+<tr><td>declared ranges</td></tr>
+<tr><td><a href="#Topic">biotea:Topic</a></td></tr>
+</table>
 
 <h3 id="link">link</h3>
-<p>| |
-| :———- |
-|Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.|
-|declared domains|
-|<a href="#biolink">biotea:Biolink</a>|
-|suggested ranges|
-|<a href="#semanticannotation">biotea:SemanticAnnotation</a>|</p>
+<table>
+<tr><td>Link between a biotea:Biolink and a semantic annotation. Used to record the semantic annotations participating in the similarity between two documents.</td></tr>
+<tr><td>declared domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a></td></tr>
+<tr><td>suggested ranges</td></tr>
+<tr><td><a href="#SemanticAnnotation">biotea:SemanticAnnotation</a></td></tr>
+</table>
 
-<h3 id="ondocument">onDocument</h3>
-<p>| |
-| :———- |
-|Points to the document for which the group-based distribution has been calculated.|
-|declared domains|
-|<a href="#topicdistribution">biotea:TopicDistribution</a>|</p>
+<h3 id="onDocument">onDocument</h3>
+<table>
+<tr><td>Points to the document for which the group-based distribution has been calculated.</td></tr>
+<tr><td>declared domains</td></tr>
+<tr><td><a href="#TopicDistribution">biotea:TopicDistribution</a></td></tr>
+</table>
 
-<h3 id="onquerydocument">onQueryDocument</h3>
-<p>| |
-| :———- |
-|Points to the query document used to calculate a semantic similarity.|
-|declared domains|
-|<a href="#biolink">biotea:Biolink</a>|</p>
+<h3 id="onQueryDocument">onQueryDocument</h3>
+<table>
+<tr><td>Points to the query document used to calculate a semantic similarity.</td></tr>
+<tr><td>declared domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a></td></tr>
+</table>
 
-<h3 id="onrelateddocument">onRelatedDocument</h3>
-<p>| |
-| :———- |
-|Points to the compared document used to calculate a semantic similarity.|
-|declared domains|
-|<a href="#biolink">biotea:Biolink</a>|</p>
+<h3 id="onRelatedDocument">onRelatedDocument</h3>
+<table>
+<tr><td>Points to the compared document used to calculate a semantic similarity.</td></tr>
+<tr><td>declared domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a></td></tr>
+</table>
 
-<h3 id="paragraphlist">paragraphList</h3>
-<p>| |
-| :———- |
-|Points to a list of paragraphs in an RDFized article.|
-|suggested domains|
-|doco:Section|
-|suggested ranges|
-|rdf:Seq|</p>
+<h3 id="paragraphList">paragraphList</h3>
+<table>
+<tr><td>Points to a list of paragraphs in an RDFized article.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td>doco:Section</td></tr>
+<tr><td>suggested ranges</td></tr>
+<tr><td>rdf:Seq</td></tr>
+</table>
 
-<h3 id="sectionlist">sectionList</h3>
-<p>| |
-| :———- |
-|Points to a list of sections in an RDFized article.|
-|suggested domains|
-|bibo:Document, doco:Section|
-|suggested ranges|
-|rdf:Seq|</p>
+<h3 id="sectionList">sectionList</h3>
+<table>
+<tr><td>Points to a list of sections in an RDFized article.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td>bibo:Document, doco:Section</td></tr>
+<tr><td>suggested ranges</td></tr>
+<tr><td>rdf:Seq</td></tr>
+</table>
 
 <h2 id="data-type-properties">Data type properties</h2>
 
 <h3 id="group">group</h3>
-<p>| |
-| :———- |
-|Name given to a semantic group in a Model.|
-|suggested domains|
-|<a href="#biolink">biotea:Biolink</a>, <a href="#model">biotea:Model</a>, <a href="#topic">biotea:Topic</a>|</p>
+<table>
+<tr><td>Name given to a semantic group in a Model.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a>, <a href="#Model">biotea:Model</a>, <a href="#Topic">biotea:Topic</a></td></tr>
+</table>
 
 <h3 id="idf">idf</h3>
-<p>| |
-| :———- |
-|Inverse document frequency of a term in a collection of documents.|
-|suggested domains|
-|<a href="#semanticannotation">biote:SemanticAnnotation</a>|
-|declared type|
-|xsd:Double|</p>
+<table>
+<tr><td>Inverse document frequency of a term in a collection of documents.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#SemanticAnnotation">biote:SemanticAnnotation</a></td></tr>
+<tr><td>declared type</td></tr>
+<tr><td>xsd:Double</td></tr>
+</table>
 
 <h3 id="occurrences">occurrences</h3>
-<p>| |
-| :———- |
-|Legacy, see <a href="#tf">biotea:tf</a> |</p>
+<table>
+<tr><td>Legacy, see <a href="#tf">biotea:tf</a> </td></tr>
+</table>
 
 <h3 id="score">score</h3>
-<p>| |
-| :———- |
-|Distribution or similarity score.|
-|suggested domains|
-|<a href="#biolink">biotea:Biolink</a>, <a href="#topic">biotea:Topic</a>|
-|declared type|
-|xsd:Double|</p>
+<table>
+<tr><td>Distribution or similarity score.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#Biolink">biotea:Biolink</a>, <a href="#Topic">biotea:Topic</a></td></tr>
+<tr><td>declared type</td></tr>
+<tr><td>xsd:Double</td></tr>
+</table>
 
 <h3 id="tf">tf</h3>
-<p>| |
-| :———- |
-|Term frequency of a term in a document.|
-|suggested domains|
-|<a href="#semanticannotation">biotea:SemanticAnnotation</a>|
-|declared type|
-|xsd:Integer|</p>
+<table>
+<tr><td>Term frequency of a term in a document.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#SemanticAnnotation">biotea:SemanticAnnotation</a></td></tr>
+<tr><td>declared type</td></tr>
+<tr><td>xsd:Integer</td></tr>
+</table>
 
-<h3 id="totaltf">totalTF</h3>
-<p>| |
-| :———- |
-|Total term frequency of all the terms used to calculate a TopicDistribution.|
-|suggested domains|
-|<a href="#topicdistribution">biotea:TopicDistribution</a>|
-|declared type|
-|xsd:Integer|</p>
-
-
-      <footer class="site-footer">
-        
-          <span class="site-footer-owner"><a href="https://github.com/biotea/biotea-ontololgy">biotea-ontololgy</a> is maintained by <a href="https://github.com/biotea">biotea</a>.</span>
-        
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-    </section>
-
-    
-  </body>
-</html>
+<h3 id="totalTF">totalTF</h3>
+<table>
+<tr><td>Total term frequency of all the terms used to calculate a TopicDistribution.</td></tr>
+<tr><td>suggested domains</td></tr>
+<tr><td><a href="#TopicDistribution">biotea:TopicDistribution</a></td></tr>
+<tr><td>declared type</td></tr>
+<tr><td>xsd:Integer</td></tr>
+</table>
