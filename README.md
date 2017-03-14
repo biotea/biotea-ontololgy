@@ -101,7 +101,7 @@ Our model references terms in the following ontologies:
 |A class representing a Biolinks group-based distribution. Such a distribution is defined on a document and all Biolinks group. A score is associated to each group, representing the weight of that group in the document.|
 |used as domain in object properties |
 |[biotea:annotator](#annotator), [biotea:hasModel](#hasmodel), [biotea:onDocument](#ondocument), [biotea:hasTopic](#hastopic), pav:createdBy|
-|used as domain in data properties |
+|used as domain in data properties|
 |[biotea:totalTF](#totaltf), pav:createdOn|
 
 ## Object properties
